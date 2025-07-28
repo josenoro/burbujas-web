@@ -53,13 +53,36 @@
       margin: 0 10px;
     }
   </style>
+  .encabezado {
+  background-image: url('fondo.jpg'); /* ← usa tu imagen subida */
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.contenido-header {
+  background-color: rgba(0, 0, 0, 0.5); /* fondo oscuro semi-transparente */
+  display: inline-block;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+img.logo {
+  max-width: 200px;
+  margin-bottom: 10px;
+}
 </head>
 <body>
 
-<header>
-  <img src="LOGO_BURBUJAS.webp" alt="Logo Burbujas" class="logo">
-  <h1>Burbujas Todo Suelto</h1>
-  <p>Todo para el hogar, tu piscina y mucho más…</p>
+<header class="encabezado">
+  <div class="contenido-header">
+    <img src="LOGO_BURBUJAS.webp" alt="Logo Burbujas" class="logo">
+    <h1>Burbujas Todo Suelto</h1>
+    <p>Todo para el hogar, tu piscina y mucho más…</p>
+  </div>
 </header>
 
 <nav>
