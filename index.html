@@ -34,6 +34,10 @@
       margin-bottom: 10px;
     }
 
+    h1 {
+      font-size: 48px;
+    }
+
     nav {
       background: #03a9f4;
       padding: 1em;
@@ -66,10 +70,37 @@
 
     footer {
       background: #0288d1;
-      color: white;https://github.com/josenoro/burbujas-web/blob/main/index.html
+      color: white;
       text-align: center;
       padding: 1em;
       margin-top: 2em;
+    }
+
+    #contador {
+      font-size: 14px;
+      color: #555;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    /* WhatsApp Popup */
+    #whatsappPopup {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+
+    #whatsappPopup a {
+      color: white;
+      text-decoration: underline;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -118,9 +149,29 @@
   </div>
 </section>
 
+<div id="contador"></div>
+
 <footer>
   &copy; 2025 Burbujas Todo Suelto – Todos los derechos reservados
 </footer>
+
+<!-- WhatsApp Popup -->
+<div id="whatsappPopup">
+  ¿Querés chatear con nosotros por WhatsApp? <a href="https://wa.me/543456512610" target="_blank">Hacé clic acá</a>
+</div>
+
+<script>
+  // Contador de visitas
+  let visitas = localStorage.getItem('contadorVisitas') || 0;
+  visitas++;
+  localStorage.setItem('contadorVisitas', visitas);
+  document.getElementById('contador').innerText = `👀 Has visitado esta página ${visitas} veces desde este dispositivo.`;
+
+  // Popup de WhatsApp
+  setTimeout(() => {
+    document.getElementById('whatsappPopup').style.display = 'block';
+  }, 3000);
+</script>
 
 </body>
 </html>
