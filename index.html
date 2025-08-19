@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -87,6 +87,7 @@
       max-height: 90%;
       border-radius: 10px;
       box-shadow: 0 0 20px rgba(255,255,255,0.8);
+      cursor: pointer;
     }
   </style>
 </head>
@@ -128,7 +129,7 @@
 
   <!-- Overlay -->
   <div id="overlay">
-    <img src="productos.png" alt="Productos de limpieza" 
+    <img src="productos.png" alt="Productos de limpieza" onclick="cerrarImagen()" 
          onerror="this.style.display='none'; document.getElementById('overlay').innerHTML='Imagen no encontrada';">
   </div>
 
@@ -137,11 +138,12 @@
     function mostrarImagen() {
       const overlay = document.getElementById('overlay');
       overlay.style.display = 'flex';
+    }
 
-      // Ocultar después de 30 segundos
-      setTimeout(() => {
-        overlay.style.display = 'none';
-      }, 30000);
+    // Cerrar overlay al hacer clic en la imagen
+    function cerrarImagen() {
+      document.getElementById('overlay').style.display = 'none';
+      window.scrollTo({ top: 0, behavior: 'smooth' }); // volver arriba
     }
 
     // Contador de visitas local
