@@ -61,6 +61,11 @@
       margin-bottom: 1em;
       border-radius: 8px;
       box-shadow: 0 0 5px #bbb;
+      cursor: pointer;
+    }
+
+    .producto:hover {
+      background: #eef6ff;
     }
 
     .social a {
@@ -102,76 +107,9 @@
       text-decoration: underline;
       font-weight: bold;
     }
-  </style>
-</head>
-<body>
 
-<header class="encabezado">
-  <div class="contenido-header">
-    <img src="LOGO_BURBUJAS.webp" alt="Logo Burbujas" class="logo">
-    <h1>Burbujas Todo Suelto</h1>
-    <p>Todo para el hogar, tu piscina y mucho más…</p>
-  </div>
-</header>
-
-<nav>
-  <a href="#inicio">Inicio</a>
-  <a href="#productos">Productos</a>
-  <a href="#contacto">Contacto</a>
-</nav>
-
-<section id="inicio">
-  <h2>Bienvenidos</h2>
-  <p>Somos Burbujas Todo Suelto, tu tienda en Chajarí con todo lo que necesitás para mantener tu casa, auto, piscina y más, IMPECABLES!!!. ¡Te asesoramos con gusto!</p>
-</section>
-
-<section id="productos">
-  <h2>Nuestros Productos</h2>
-
-  <div class="producto"><strong>Limpieza para el hogar</strong><br> Detergentes, lavandinas, desodorantes, etc.</div>
-  <div class="producto"><strong>Insumos para piscinas</strong><br> Cloro, medidores de ph, pastillas, alguicida, clarificador, sacahojas, barrefondo y más...</div>
-  <div class="producto"><strong>NATACLOR</strong><br> Cloro granulado, pastillas de 50 y 200 gms., alguicida, clarificador.</div>
-  <div class="producto"><strong>Macetas</strong><br> Varios tamaños, colores y materiales.</div>
-  <div class="producto"><strong>Insecticidas</strong><br> Espirales, aerosoles, soluciones ecológicas.</div>
-  <div class="producto"><strong>Cosmética automotriz</strong><br> Silicona, shampoo, limpia tapizados.</div>
-  <div class="producto"><strong>Deco baño</strong><br> Cortinas, alfombras, porta objetos.</div>
-  <div class="producto"><strong>Bazar</strong><br> Utensilios, recipientes, frascos.</div>
-  <div class="producto"><strong>Limpieza institucional</strong><br> Mopas, escobas, bidones grandes.</div>
-</section>
-
-<section id="contacto">
-  <h2>Contacto</h2>
-  <p>📍 Dirección: 9 de julio 2480 – Chajarí</p>
-  <p>📞 WhatsApp: <a href="https://wa.me/543456512610">3456-512610</a></p>
-  <div class="social">
-    <a href="https://www.facebook.com/burbujas.todosueltochajari?fref=ts">Facebook</a> |
-    <a href="https://www.instagram.com/burbujaschajari/">Instagram</a>
-  </div>
-</section>
-
-<div id="contador"></div>
-
-<footer>
-  &copy; 2025 Burbujas Todo Suelto – Todos los derechos reservados
-</footer>
-
-<!-- WhatsApp Popup -->
-<div id="whatsappPopup">
-  ¿Querés chatear con nosotros por WhatsApp? <a href="https://wa.me/543456512610" target="_blank">Hacé clic acá</a>
-</div>
-
-<script>
-  // Contador de visitas
-  let visitas = localStorage.getItem('contadorVisitas') || 0;
-  visitas++;
-  localStorage.setItem('contadorVisitas', visitas);
-  document.getElementById('contador').innerText = `👀 Has visitado esta página ${visitas} veces desde este dispositivo.`;
-
-  // Popup de WhatsApp
-  setTimeout(() => {
-    document.getElementById('whatsappPopup').style.display = 'block';
-  }, 3000);
-</script>
-
-</body>
-</html>
+    /* Imagen de productos */
+    #img-productos {
+      display: none;
+      margin: 20px auto;
+      max-width: 100%
